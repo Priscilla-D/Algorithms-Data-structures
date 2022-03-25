@@ -1,0 +1,21 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "description": "## Big O notation",
+  "main": "Add.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Priscilla-placeshaker/Algorithms-Data-structures.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Priscilla-placeshaker/Algorithms-Data-structures/issues"
+  },
+  "homepage": "https://github.com/Priscilla-placeshaker/Algorithms-Data-structures#readme"
+}
