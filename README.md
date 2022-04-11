@@ -334,7 +334,7 @@ When you want to compare pieces of data (2 or more, to avoid O(n2))
 
 Here we wanna check if the square number is present in the second array.
 
-````
+```
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
         return false;
@@ -372,7 +372,7 @@ same([1,2,3,2], [9,1,4,4])
 
 same refactored:
 
-````
+```
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
         return false;
@@ -400,3 +400,46 @@ function same(arr1, arr2){
 
 same([1,2,3,2,5], [9,1,4,4,11])
 ```
+
+### Multiple Pointers Pattern
+
+In an ordered array we want to find the first pair of number wich return 0.
+
+
+The naive solution loops nasted
+```
+function sumZero(arr){
+    for(let i = 0; i < arr.length; i++){
+        for(let j = i+1; j < arr.length; j++){
+            if(arr[i] + arr[j] === 0){
+                return [arr[i], arr[j]];
+            }
+        }
+    }
+}
+
+sumZero([-4,-3,-2,-1,0,1,2,5])
+```
+but we want to avoid the time complexity.
+Time complexity -> O(n^2)
+Time complexity -> O(1)
+
+The solution :
+```
+function sumZero(arr){
+    let left = 0;
+    let right = arr.length - 1;
+    while(left < right){
+let sum = arr[left] + arr[right];
+if(sum === 0){
+    return [arr[left]], arr[right]];
+} else if(sum > 0){
+    right--;
+} else {
+    left ++;
+}
+    }
+}
+```
+Time complexity -> O(n)
+Time complexity -> O(1)
